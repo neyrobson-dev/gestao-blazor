@@ -38,7 +38,7 @@
             <div class="mb-3">
                 <label for="password" class="form-label">Senha</label>
                 <div class="position-relative auth-pass-inputgroup">
-                    <InputText type="password" @bind-Value="Input.Password" id="password" class="form-control pe-5 password-input" autocomplete="current-password" aria-required="true" placeholder="Digite sua senha" />
+                    <InputText type="password" @bind-Value="Input.Password" id="password" class="form-control pe-5 password-input" onpaste="return false" autocomplete="current-password" aria-required="true" placeholder="Digite sua senha" />
                     <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
                 </div>
                 <ValidationMessage For="() => Input.Password" class="invalid-feedback" />
@@ -47,7 +47,7 @@
             <div class="mb-3">
                 <label for="confirm-password" class="form-label">Confirme a senha</label>
                 <div class="position-relative auth-pass-inputgroup">
-                    <InputText type="password" @bind-Value="Input.ConfirmPassword" id="confirm-password" class="form-control pe-5 password-input" autocomplete="new-password" aria-required="true" placeholder="Confirme sua senha" />
+                    <InputText type="password" @bind-Value="Input.ConfirmPassword" id="confirm-password" class="form-control pe-5 password-input" onpaste="return false" autocomplete="new-password" aria-required="true" placeholder="Confirme sua senha" />
                     <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
                 </div>
                 <ValidationMessage For="() => Input.ConfirmPassword" class="invalid-feedback" />
@@ -74,13 +74,7 @@
             <div class="signin-other-title">
                 <h5 class="fs-13 mb-4 title text-muted">Criar conta com</h5>
             </div>
-            <ExternalLoginPicker />
-            <div>
-                <button type="button" class="btn btn-primary btn-icon waves-effect waves-light"><i class="ri-facebook-fill fs-16"></i></button>
-                <button type="button" class="btn btn-danger btn-icon waves-effect waves-light"><i class="ri-google-fill fs-16"></i></button>
-                <button type="button" class="btn btn-dark btn-icon waves-effect waves-light"><i class="ri-github-fill fs-16"></i></button>
-                <button type="button" class="btn btn-info btn-icon waves-effect waves-light"><i class="ri-twitter-fill fs-16"></i></button>
-            </div>
+            <ExternalLoginPicker />           
         </div>
     </div>
 
@@ -98,7 +92,7 @@
     [SupplyParameterFromQuery]
     private string? ReturnUrl { get; set; }
 
-    private string? Message => identityErrors is null ? null : $"Error: {string.Join(", ", identityErrors.Select(error => error.Description))}";
+    private string? Message => identityErrors is null ? null : $"Erro: {string.Join(", ", identityErrors.Select(error => error.Description))}";
 
     public async Task RegisterUser(EditContext editContext)
     {
@@ -163,18 +157,18 @@
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; } = "";
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "O campo {0} deve ter no mínimo {2} e no máximo {1} caracteres de comprimento.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Senha")]
         public string Password { get; set; } = "";
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "Confirmação da senha")]
+        [Compare("Password", ErrorMessage = "A senha e a confirmação de senha não correspondem.")]
         public string ConfirmPassword { get; set; } = "";
     }
 }

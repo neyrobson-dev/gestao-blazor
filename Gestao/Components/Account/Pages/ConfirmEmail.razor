@@ -1,4 +1,5 @@
 ﻿@page "/Account/ConfirmEmail"
+@layout Gestao.Components.Layout.Default.DefaultLayout
 
 @using System.Text
 @using Microsoft.AspNetCore.Identity
@@ -8,10 +9,23 @@
 @inject UserManager<ApplicationUser> UserManager
 @inject IdentityRedirectManager RedirectManager
 
-<PageTitle>Confirm email</PageTitle>
+<PageTitle>E-mail confirmado</PageTitle>
 
-<h1>Confirm email</h1>
-<StatusMessage Message="@statusMessage" />
+<div class="p-lg-5 p-4">
+    <h5 class="text-primary">E-mail confirmado</h5>
+    <div class="avatar-lg mx-auto mt-4 mb-4">
+        <div class="avatar-title bg-light text-success display-3 rounded-circle">
+            <i class="ri-checkbox-circle-fill"></i>
+        </div>
+    </div>
+    <div class="p-2">
+        <StatusMessage Message="@statusMessage" />
+    </div>
+
+    <div class="mt-4 text-center">
+        <p class="mb-0"><a href="/Account/Login" class="fw-semibold text-primary text-decoration-underline"> Voltar </a> </p>
+    </div>
+</div>
 
 @code {
     private string? statusMessage;
@@ -36,13 +50,13 @@
         if (user is null)
         {
             HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
-            statusMessage = $"Error loading user with ID {UserId}";
+            statusMessage = $"Erro ao carregar usuário com ID {UserId}";
         }
         else
         {
             var code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(Code));
             var result = await UserManager.ConfirmEmailAsync(user, code);
-            statusMessage = result.Succeeded ? "Thank you for confirming your email." : "Error confirming your email.";
+            statusMessage = result.Succeeded ? "Obrigado por confirmar seu e-mail." : "Erro ao confirmar seu e-mail.";
         }
     }
 }
