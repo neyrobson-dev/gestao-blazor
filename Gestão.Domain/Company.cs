@@ -2,7 +2,7 @@
 
 namespace Gestão.Domain
 {
-    internal class Company
+    public class Company
     {
         public int Id { get; set; }
         public string LegalName { get; set; } = string.Empty;
