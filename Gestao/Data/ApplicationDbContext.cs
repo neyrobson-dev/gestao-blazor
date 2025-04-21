@@ -19,6 +19,10 @@ namespace Gestao.Data
             builder.Entity<FinancialTransaction>()
                 .Property(f => f.Repeat)
                 .HasConversion<string>();
+
+            builder.Entity<FinancialTransaction>()
+                .Property(f => f.TypeFinancialTransaction)
+                .HasConversion<string>();
         }
     }
 }

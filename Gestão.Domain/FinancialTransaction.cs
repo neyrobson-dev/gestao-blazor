@@ -11,6 +11,7 @@ namespace Gestão.Domain
     public class FinancialTransaction
     {
         public int Id { get; set; }
+        public TypeFinancialTransaction TypeFinancialTransaction { get; set; }
         public string Description { get; set; }
         public DateTimeOffset ReferenceDate { get; set; }
         public DateTimeOffset DueDate { get; set; }
@@ -21,7 +22,7 @@ namespace Gestão.Domain
         public decimal? InterestPenalty { get; set; }
         public decimal? Discount { get; set; }
         public DateTimeOffset? PaymentDate { get; set; }
-        public decimal? AmoundPaid { get; set; }
+        public decimal? AmoundPaid { get; set; }        
         public string? Observation { get; set; }
         public ICollection<Document>? Documents { get; set; }
         public int? CompanyId { get; set; }
