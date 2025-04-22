@@ -9,7 +9,7 @@ namespace Gestao.Data.Repositories
         Task Delete(int id);
         Task<Category?> Get(int id);
         Task<List<Category>> GetAll(int companyId);
-        Task<PaginatedList<Category>> GetAll(int companyId, int pagaIndex, int pageSize, string? searchWord);
+        Task<PaginatedList<Category>> GetAll(int companyId, int pagaIndex, int pageSize, string? searchWord = "");
         Task Update(Category category);
     }
 }

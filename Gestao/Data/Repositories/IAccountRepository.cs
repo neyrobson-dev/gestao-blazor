@@ -9,7 +9,7 @@ namespace Gestao.Data.Repositories
         Task Delete(int id);
         Task<Account?> Get(int id);
         Task<List<Account>> GetAll(int companyId);
-        Task<PaginatedList<Account>> GetAll(int companyId, int pagaIndex, int pageSize, string? searchWord);
+        Task<PaginatedList<Account>> GetAll(int companyId, int pagaIndex, int pageSize, string? searchWord = "");
         Task Update(Account entity);
     }
 }
