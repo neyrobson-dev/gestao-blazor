@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestao", "Gestao\Gestao.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestao.Client", "Gestao.Client\Gestao.Client.csproj", "{999A8FB3-5223-4227-9B62-657B92EB6806}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestão.Domain", "Gestão.Domain\Gestão.Domain.csproj", "{E543FFD9-85BF-4E60-8404-68F246FB7495}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestao.Domain", "Gestão.Domain\Gestao.Domain.csproj", "{E543FFD9-85BF-4E60-8404-68F246FB7495}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

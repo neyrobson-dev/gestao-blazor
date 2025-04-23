@@ -1,6 +1,6 @@
 ﻿using Gestao.Data;
 
-namespace Gestão.Domain
+namespace Gestao.Domain
 {
     public class Company
     {

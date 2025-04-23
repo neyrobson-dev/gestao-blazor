@@ -1,6 +1,6 @@
-﻿using Gestão.Domain;
+﻿using Gestao.Domain;
 
-namespace Gestao.Data.Repositories
+namespace Gestao.Domain.Repositories
 {
     public interface IDocumentRepository
     {

@@ -1,12 +1,6 @@
-﻿using Gestão.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Gestao.Domain.Enums;
 
-namespace Gestão.Domain
+namespace Gestao.Domain
 {
     public class FinancialTransaction
     {

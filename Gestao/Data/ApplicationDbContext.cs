@@ -1,4 +1,4 @@
-using Gestão.Domain;
+using Gestao.Domain;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

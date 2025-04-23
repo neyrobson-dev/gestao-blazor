@@ -1,9 +1,9 @@
-using Gestao.Client.Pages;
 using Gestao.Components;
 using Gestao.Components.Account;
 using Gestao.Data;
 using Gestao.Data.Repositories;
-using Gestão.Domain.Enums;
+using Gestao.Domain.Enums;
+using Gestao.Domain.Repositories;
 using Gestao.Libraries.Mail;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;

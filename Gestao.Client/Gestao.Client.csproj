@@ -14,11 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Gestão.Domain\Gestão.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Libraries\" />
+    <ProjectReference Include="..\Gestão.Domain\Gestao.Domain.csproj" />
   </ItemGroup>
 
 </Project>

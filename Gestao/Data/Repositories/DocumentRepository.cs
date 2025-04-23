@@ -1,6 +1,6 @@
-﻿using Gestão.Domain.Libraries.Utilities;
-using Gestão.Domain;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Gestao.Domain;
+using Gestao.Domain.Repositories;
 
 namespace Gestao.Data.Repositories
 {

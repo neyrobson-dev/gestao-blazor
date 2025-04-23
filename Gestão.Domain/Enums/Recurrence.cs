@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Gestão.Domain.Enums
+namespace Gestao.Domain.Enums
 {
     public enum Recurrence
     {

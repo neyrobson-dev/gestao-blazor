@@ -1,4 +1,4 @@
-﻿namespace Gestão.Domain
+﻿namespace Gestao.Domain
 {
     public class Account
     {

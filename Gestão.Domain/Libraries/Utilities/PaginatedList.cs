@@ -1,4 +1,4 @@
-﻿namespace Gestão.Domain.Libraries.Utilities
+﻿namespace Gestao.Domain.Libraries.Utilities
 {
     public class PaginatedList<T>
     {

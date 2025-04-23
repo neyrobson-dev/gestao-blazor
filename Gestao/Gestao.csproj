@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Gestao.Client\Gestao.Client.csproj" />
-    <ProjectReference Include="..\Gestão.Domain\Gestão.Domain.csproj" />
+    <ProjectReference Include="..\Gestão.Domain\Gestao.Domain.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.14" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.14" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.14" />
